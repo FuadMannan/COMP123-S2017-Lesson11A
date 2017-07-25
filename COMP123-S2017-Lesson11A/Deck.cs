@@ -8,7 +8,7 @@ using System.Text;
  * Date: July 25, 2017
  * Description: This is the Deck class which inherits from the List generic collection
  * This class creates a new List type - Card
- * Version: 0.2 - Fixed bug in the _initialize method
+ * Version: 0.3 - Added public Shuffle method
  */
 
 namespace COMP123_S2017_Lesson11A
@@ -16,6 +16,16 @@ namespace COMP123_S2017_Lesson11A
     public class Deck:List<Card>
     {
         // PRIVATE INSTANCE VARIABLES
+        private Random _random;
+
+        // PRIVATE PROPERTIES
+        private Random Random {
+            get
+            {
+                return this._random;
+            }
+
+        }
 
         // PUBLIC PROPERTIES
 
@@ -33,9 +43,14 @@ namespace COMP123_S2017_Lesson11A
 
         /// <summary>
         /// This is the private _initialize method that loads the deck with 52 cards.
+        /// This method also initializes other class variables
         /// </summary>
         private void _initialize()
         {
+            // initialize the random object
+            this._random = new Random();
+
+            // load the list with cards
             for (int suit = 0; suit <= (int)Suit.Spades; suit++)
             {
                 for (int face = 1; face <= (int)Face.King; face++)
@@ -62,5 +77,27 @@ namespace COMP123_S2017_Lesson11A
 
             return outputString;
         }
+
+        /// <summary>
+        /// This method shuffles the deck
+        /// </summary>
+        public void Shuffle()
+        {
+            int firstCard;
+            int secondCard;
+            Card tempCard;
+
+            for (int i = 0; i < this.Count; i++)
+            {
+                firstCard = this.Random.Next(0, 52);
+                secondCard = this.Random.Next(0, 52);
+                tempCard = (Card)this[secondCard].Clone();
+                this[secondCard].Face = this[firstCard].Face;
+                this[secondCard].Suit = this[firstCard].Suit;
+                this[firstCard].Face = tempCard.Face;
+                this[firstCard].Suit = tempCard.Suit;
+            }
+        }
+
     }
 }

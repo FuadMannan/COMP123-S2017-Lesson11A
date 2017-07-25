@@ -19,6 +19,9 @@ namespace COMP123_S2017_Lesson11A
         {
             Deck deck = new Deck();
             Console.WriteLine(deck.ToString());
+            Console.WriteLine();
+            deck.Shuffle();
+            Console.WriteLine(deck.ToString());
         }
     }
 }
