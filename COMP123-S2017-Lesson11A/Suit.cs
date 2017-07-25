@@ -2,21 +2,21 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 /*
  * Name: Tom Tsiliopoulos
  * Date: July 25, 2017
- * Description: Demo for Lesson 11
- * Version: 0.1 - Created the Program class
+ * Description: Enumeration for Suits
+ * Version: 0.1 - Created the Suit Enum
  */
 
 namespace COMP123_S2017_Lesson11A
 {
-    class Program
+    public enum Suit
     {
-        static void Main(string[] args)
-        {
-        }
+        Clubs,
+        Diamonds,
+        Hearts,
+        Spades
     }
 }
