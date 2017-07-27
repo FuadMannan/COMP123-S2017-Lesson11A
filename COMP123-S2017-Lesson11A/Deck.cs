@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 
 /*
- * Name: Tom Tsiliopoulos
- * Date: July 25, 2017
+ * Name: Fuad Mannan
+ * Date: July 27, 2017
  * Description: This is the Deck class.
  * It inherits from the CardList class
- * Version: 0.5 - Added Deal1 method
+ * Version: 0.6 - Added Deal5 method
  */
 
 namespace COMP123_S2017_Lesson11A
@@ -104,6 +104,15 @@ namespace COMP123_S2017_Lesson11A
             Console.WriteLine("Deck Contains: " + this.Count + " Cards");
             return firstCard;
         }
-
+        public Hand Deal5()
+        {
+            Hand newHand = new Hand();
+            for (int i = 0; i < 5; i++)
+            {
+                newHand.Add(this[0]);
+                this.RemoveAt(0);
+            }
+            return newHand;
+        }
     }
 }
