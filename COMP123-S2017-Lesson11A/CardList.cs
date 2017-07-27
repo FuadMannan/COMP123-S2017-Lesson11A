@@ -5,8 +5,8 @@ using System.Text;
 
 /*
  * Name: Tom Tsiliopoulos
- * Date: July 25, 2017
- * Description: This is the abstractl superclass CardList.
+ * Date: July 27, 2017
+ * Description: This is the abstract superclass CardList.
  * It inherits from the build-in List generic collection and consumes the Card class
  * Version: 0.1 - Created the CardList class
  */

@@ -6,8 +6,8 @@ using System.Text;
 /*
  * Name: Tom Tsiliopoulos
  * Date: July 25, 2017
- * Description: This is the Deck class which inherits from the List generic collection
- * This class creates a new List type - Card
+ * Description: This is the Deck class.
+ * It inherits from the CardList class
  * Version: 0.4 - Refactored Deck class to inherit from CardList
  */
 
@@ -30,14 +30,6 @@ namespace COMP123_S2017_Lesson11A
         // PUBLIC PROPERTIES
 
         // CONSTRUCTORS
-
-        /// <summary>
-        /// This is the main constructor for the Deck class.
-        /// </summary>
-        public Deck()
-        {
-            this._initialize();
-        }
 
         // PRIVATE METHODS
 
@@ -69,6 +61,8 @@ namespace COMP123_S2017_Lesson11A
         public override string ToString()
         {
             string outputString = "";
+            outputString += "The Deck contains:\n";
+            outputString += "================================================\n";
 
             foreach (Card card in this)
             {
