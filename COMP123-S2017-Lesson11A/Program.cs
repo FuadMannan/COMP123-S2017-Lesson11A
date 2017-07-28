@@ -20,16 +20,19 @@ namespace COMP123_S2017_Lesson11A
             //Hand hand = new Hand(); // new empty Hand container
 
             Deck deck = new Deck();
-            Console.WriteLine(deck.ToString());
-            Console.WriteLine();
+            //Console.WriteLine(deck.ToString());
+            //Console.WriteLine();
             deck.Shuffle();
             Console.WriteLine(deck.ToString());
             Console.WriteLine();
             Hand hand = deck.Deal5();
-            Console.WriteLine(hand);
+            Console.WriteLine(hand.ToString());
             Console.WriteLine();
-            Console.WriteLine(deck);
-            Console.WriteLine(deck.Count);
+            //Console.WriteLine(deck);
+            //Console.WriteLine();
+            //hand.HighestCards();
+            //hand.Add(new Card(Face.King, Suit.Spades));   //test to see if HighestCards will display doubles
+            //hand.Add(new Card(Face.King, Suit.Hearts));
             hand.HighestCards();
             Console.ReadKey();
             /*

@@ -38,13 +38,14 @@ namespace COMP123_S2017_Lesson11A
                 from card in this
                 orderby card.Face descending
                 select card;
-            int highestValue = (int)this[0].Face;
+            int highestValue = 0;
             Console.WriteLine("Highest cards in hand:");
             foreach(var card in max)
             {
-                if ((int)card.Face == highestValue)
+                if ((int)card.Face >= highestValue)
                 {
                     Console.WriteLine(card);
+                    highestValue = (int)card.Face;
                 }
             }
         }
