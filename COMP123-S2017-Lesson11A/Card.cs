@@ -5,11 +5,11 @@ using System.Text;
 
 
 /*
- * Name: Tom Tsiliopoulos
- * Date: July 25, 2017
+ * Name: Fuad Mannan
+ * Date: July 27, 2017
  * Description: This is the Card class to be used in the
  * card shuffling and dealing simulation
- * Version: 0.2 - Added Clone method
+ * Version: 0.3 - Added ToString method
  */
 
 namespace COMP123_S2017_Lesson11A
@@ -78,6 +78,9 @@ namespace COMP123_S2017_Lesson11A
         {
             return new Card(this.Face, this.Suit);
         }
-
+        public override string ToString()
+        {
+            return ("The " + Face + " of " + Suit);
+        }
     }
 }

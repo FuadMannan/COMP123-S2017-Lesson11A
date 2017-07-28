@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 /*
- * Name: Tom Tsiliopoulos
+ * Name: Fuad Mannan
  * Date: July 27, 2017
  * Description: Lab 25 main program
  * Version: 0.5 - Updated the Program class to include tests for Deal5
@@ -20,17 +20,17 @@ namespace COMP123_S2017_Lesson11A
             //Hand hand = new Hand(); // new empty Hand container
 
             Deck deck = new Deck();
+            Console.WriteLine(deck.ToString());
+            Console.WriteLine();
             deck.Shuffle();
             Console.WriteLine(deck.ToString());
             Console.WriteLine();
-            //deck.Shuffle();
-            //Console.WriteLine(deck.ToString());
-            //Console.WriteLine();
             Hand hand = deck.Deal5();
             Console.WriteLine(hand);
             Console.WriteLine();
             Console.WriteLine(deck);
             Console.WriteLine(deck.Count);
+            hand.HighestCards();
             Console.ReadKey();
             /*
             hand.Add(deck.Deal1()); // deal one card from the top of the deck
@@ -41,6 +41,8 @@ namespace COMP123_S2017_Lesson11A
             */
 
             // hand = deck.Deal5(); // creates a new Hand object and assigns it to hand
+
+
         }
     }
 }

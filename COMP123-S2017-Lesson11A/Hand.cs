@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 
 /*
- * Name: Tom Tsiliopoulos
+ * Name: Fuad Mannan
  * Date: July 27, 2017
  * Description: This is the Hand class
  * It inherits from the CardList class
- * Version: 0.4 - Fixed a bug - non-implemented _initialize method
+ * Version: 0.4 - added HighestCards method
  */
 
 namespace COMP123_S2017_Lesson11A
@@ -32,6 +32,22 @@ namespace COMP123_S2017_Lesson11A
         }
 
         // PUBLIC METHODS
+        public void HighestCards()
+        {
+            var max =
+                from card in this
+                orderby card.Face descending
+                select card;
+            int highestValue = (int)this[0].Face;
+            Console.WriteLine("Highest cards in hand:");
+            foreach(var card in max)
+            {
+                if ((int)card.Face == highestValue)
+                {
+                    Console.WriteLine(card);
+                }
+            }
+        }
 
         /// <summary>
         /// This method overrides the built-in ToString method
